@@ -38,6 +38,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlU-dS-Bj1">
+                                <rect key="frame" x="765" y="381" width="111" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="о программе">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZP-6a-AWA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -46,11 +57,14 @@
                             <constraint firstItem="1Yt-Gf-fmT" firstAttribute="top" secondItem="dF7-gP-MBv" secondAttribute="bottom" constant="30" id="B9M-5v-Zfg"/>
                             <constraint firstItem="3ej-62-CjC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BXR-WS-GcT"/>
                             <constraint firstItem="1Yt-Gf-fmT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D7i-rt-4cX"/>
+                            <constraint firstAttribute="trailing" secondItem="jlU-dS-Bj1" secondAttribute="trailing" constant="20" id="Lt0-vK-Z1p"/>
+                            <constraint firstAttribute="bottom" secondItem="jlU-dS-Bj1" secondAttribute="bottom" id="NCw-Il-dGH"/>
                             <constraint firstItem="3ej-62-CjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nAg-Wb-vz2"/>
                             <constraint firstItem="dF7-gP-MBv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rli-vq-fYR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ej-62-CjC" secondAttribute="trailing" constant="20" id="vpE-YK-BRQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9EB-Mr-63m"/>
                     <connections>
                         <outlet property="label" destination="1Yt-Gf-fmT" id="Lgh-xC-SPd"/>
                         <outlet property="slider" destination="3ej-62-CjC" id="O6B-ae-07K"/>
@@ -60,10 +74,42 @@
             </objects>
             <point key="canvasLocation" x="39" y="68"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Cva-SB-nMa">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="MGF-tm-UDy" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LPt-Yo-c4G">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFb-Lm-43P">
+                                <rect key="frame" x="425.5" y="192" width="45" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <action selector="hideCurrentScene" destination="MGF-tm-UDy" eventType="touchUpInside" id="DiN-JO-PKH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7dr-Ot-HXu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mFb-Lm-43P" firstAttribute="centerY" secondItem="LPt-Yo-c4G" secondAttribute="centerY" id="DZv-Uq-vOR"/>
+                            <constraint firstItem="mFb-Lm-43P" firstAttribute="centerX" secondItem="LPt-Yo-c4G" secondAttribute="centerX" id="nRy-Pn-3b0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="idx-Bf-dzp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vzm-Xv-isI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="67"/>
+        </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

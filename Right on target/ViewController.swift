@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
     
-    var number: Int = 0
-    var round: Int = 1
-    var points: Int = 0
+    var number : Int = 0
+    var round  : Int = 1
+    var points : Int = 0
     
     @IBAction func checkNumber() {
         
@@ -58,6 +58,15 @@ class ViewController: UIViewController {
             return
         }
         
+    }
+    lazy var secondViewController: SecondViewController = getSecondViewController()
+    private func getSecondViewController() -> SecondViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
+    @IBAction func showNextScreen() {
+        self.present(secondViewController, animated: true, completion: nil)
     }
     override func loadView() {
         super.loadView()
